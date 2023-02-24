@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  .playersInfo{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+
+    .playerScore {
+      display: flex;
+      align-items: center;
+      gap: 20px
+    }
+
+    .p1 {
+      color: blue;
+    }
+
+    .p2 {
+      color: red;
+    }
+  }
+  .board {
+    display: grid;
+    width: fit-content;
+    gap: 5px;
+    grid-template-columns: auto auto auto;
+    .cell {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e6e6e6;
+
+      &:hover {
+        background-color: #b4b8b8;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .playersInfo {
+      width: 300px;
+      flex-direction: column;
+      height: 80px;
+      .p2{
+        flex-direction: row-reverse;
+      }
+    }
+
+    .board .cell{
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .playersInfo {
+      width: 100%;
+      flex-direction: column;
+      .p2{
+        flex-direction: row-reverse;
+      }
+    }
+
+    .board .cell{
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+
+}

@@ -1,0 +1,42 @@
+.container {
+  padding: 40px;
+  .inputContainer{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    position: relative;
+
+    input {
+      width: 200px;
+      height: 30px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      font-size: 16px;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    .errorMessageContainer{
+      position: absolute;
+      bottom: 0;
+
+      p {
+        font-size: 14px;
+        color: red;
+        margin: 0;
+      }
+    }
+  }
+
+  .submitButton {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    background-color: #0d618d;
+    color: #fff;
+  }
+}
